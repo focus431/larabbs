@@ -1,6 +1,7 @@
 <?php
 
 use ILLuminate\support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,3 +14,6 @@ use ILLuminate\support\Facades\Route;
 */
 
 Route::get('/', 'PagesController@root')->name('root');
+
+Auth::routes();
+
