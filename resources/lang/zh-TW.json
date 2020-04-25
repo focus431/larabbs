@@ -1,5 +1,6 @@
 {
     "Login":"登入",
     "Password": "密碼",
-    "Remember Me": "記住我"
+    "Remember Me": "記住我",
+    "Captcha": "驗證碼"
 }

@@ -22,8 +22,19 @@ body {
     margin-bottom: 60px;
   }
   
+
+  /* User register page */
+.register-page {
+  img.captcha {
+    cursor: pointer;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 3px;
+  }
+}
+
+
   /* header */
-  
   .navbar-static-top {
     border-color: #e7e7e7;
     background-color: #fff;
