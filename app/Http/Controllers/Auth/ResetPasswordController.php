@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ResetsPasswords;
-
+use Symfony\Component\HttpFoundation\Request;
 class ResetPasswordController extends Controller
 {
     /*
@@ -26,5 +26,16 @@ class ResetPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/';
+    
+    public function __construct()
+    {
+        $this->middleware('guest');
+    }
+
+    protected function sendResetResponse(Request $request, $response)
+    {
+        session()->flash('success' , '密碼更新成功，己成功登錄');
+        return redirect($this->redirectPath());
+    }
 }
